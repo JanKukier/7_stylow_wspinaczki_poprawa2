@@ -1,0 +1,277 @@
+@charset "utf-8";
+/* CSS Document */
+
+		html, body{
+			width:100%;
+			height:100%;
+			margin:0;
+			padding:0;
+		}
+body{
+	background-color:#977c9c;
+	text-align:center;
+}
+a{
+	color:black;
+}
+p, .tytul_podstrony{
+	font-family:comic sans ms;
+	margin:0 30% 0 30%;
+	font-size:25px;
+}
+tr{
+	border-color:black;
+	border-width:thin;
+	border-style:solid;
+}
+td{
+	border-color:black;
+	border-width:thin;
+	border-style:solid;
+}
+table{
+	margin-left:auto;
+	margin-right:auto;
+}
+#tytul{
+	background-color:#1d2149;
+	width:calc(100% - 300px);
+	height:100px;
+	text-align: center;
+	float:left;
+}
+#menu_zewnetrzne_lewa a{
+	color:lightblue;
+}
+#menu_zewnetrzne_prawa a{
+	color:lightblue;
+}
+		#logo{
+			background-color: #c334cd;
+			width:300px;
+			height:100px;
+			text-align:center;
+			float:left;
+			display:table;
+		}
+.animationdiv{
+	animation-name:load;
+	animation-duration:3s;
+	animation-iteration-count:infinite;
+	background-color:red;
+	width:50px;
+	height:25px;
+	position:absolute;
+	margin-left:auto;
+	margin-right:auto;
+}
+@keyframes load{
+	0%{left:-50px;top:470px;background-color:red;}
+	25%{left:-50px;top:-68px;background-color:black;box-shadow: 0px 550px 20px -7px rgba(90, 66, 71, 1);}
+	50%{left:185px;top:-68px;background-color:blue;box-shadow: -240px 550px 20px -7px rgba(90, 66, 71, 1);}
+	75%{left:185px;top:470px;background-color:purple;box-shadow: -240px 0px 20px -7px rgba(90, 66, 71, 1);}
+	100%{left:-50px;top:470px;background-color:red;}
+}
+.ankieta{
+	position:relative;
+	width:200px;
+	margin-right: auto;
+	margin-left:auto;
+}
+#tytul2{
+	background-color:#85b4e4;
+	width:100%;
+	height:20%;
+	text-align: center;
+	float:left;
+	display:none;
+}
+		#tresc{
+			width:calc(70% - 8px);
+			background-color:#977c9c;
+			float:left;
+			height:calc(90% - 100px);
+			text-align:center;
+		}
+		.menu{
+			background-color:#1d2149;
+			width:15%;
+			float:left;
+			height:calc(90% - 100px);
+			text-align:center;
+			font-size:2vw;
+			text-overflow:clip;
+			border-color:#c334cd;
+			border-style:dashed;
+			border-width:2px;
+			word-break:normal;
+		}
+		iframe{
+			width:100%;
+			height:100%;
+		}
+#stopka{
+	background-color: #c334cd;
+	width:100%;
+	height:calc(10% - 4px);
+	float:left;
+	text-align:center;
+	font-size:2vw;
+}
+#menu_zewnetrzne_lewa{
+	display: none;
+}
+#logotr{
+	content:"";
+	display:table-cell;
+	vertical-align: middle;
+	font-size:50px;;
+	position:relative;
+	font-style:italic;
+	font-weight:bolder;
+	letter-spacing:30px;
+	
+}
+#logotr::before{
+	content:'';
+	display:block;
+	position:absolute;
+	background-color: black;
+	width:155px;
+	height:3px;
+	left:20%;
+	border-top-style:dashed;
+	border-top-color:gray;
+	border-top-width:thick;
+}
+#logotr::after{
+	content:'';
+	display:block;
+	position:absolute;
+	background-color: black;
+	width:155px;
+	height:3px;
+	left:20%;
+	border-bottom-style:dashed;
+	border-bottom-color:gray;
+	border-bottom-width:thick;
+}
+.linki{
+	color:lightblue;
+}
+h3, h5{
+	color:lightblue;
+	font-size:1.1vw;
+}
+.breakline{
+	display: block;
+}
+@media screen and (max-width:1200px){
+	#menu_zewnetrzne_lewa{display:block;}
+	#menu_zewnetrzne_prawa{display:none;}
+		}
+@media screen and (max-width:600px ){
+	#tytul2{
+		display:block;
+		height:10%;
+	}
+	#logo{display:none;}
+	#tytul{display:none;}
+	.menu{height:80%;}
+	#tresc{height:80%;}
+		}
+
+/*Slide show*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 360px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+#firstslide{
+	display:block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+	left:0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
